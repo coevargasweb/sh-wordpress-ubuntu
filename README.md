@@ -91,7 +91,7 @@ sudo systemctl restart nginx
 sudo apt install certbot python3-certbot-nginx -y
 
 # Obtener y configurar el certificado SSL
-sudo certbot --nginx -d domine.com --non-interactive --agree-tos -m tu_email@example.com
+sudo certbot --nginx -d petloversapp.com --non-interactive --agree-tos -m tu_email@example.com
 
 # Verificar auto-renovación de SSL
 sudo systemctl status certbot.timer
@@ -103,7 +103,7 @@ chmod +x wp-cli.phar
 sudo mv wp-cli.phar /usr/local/bin/wp
 
 # Completar la instalación de WordPress
-sudo -u www-data -- wp core install --url="http://domine.com" --title="Pet Lovers App" --admin_user="admin" --admin_password="admin_password" --admin_email="admin@example.com"
+sudo -u www-data -- wp core install --url="https://petloversapp.com/" --title="Pet Lovers App" --admin_user="admin" --admin_password="password" --admin_email="petloversapp2024@gmail.com"
 
 echo "Instalación completada. Por favor, visita http://domine.com para verificar."
 ```
@@ -124,3 +124,5 @@ Para ejecutar el script, sigue estos pasos:
     ```
 
 Este script instalará y configurará WordPress con Nginx, MySQL, PHP 8.2, un certificado SSL automático y WP-CLI en tu instancia de AWS EC2. Asegúrate de reemplazar `tu_email@example.com` y las credenciales de administrador de WordPress con tus propios valores.
+
+Instalar addicionalmente los modulos de PHP necesarios
